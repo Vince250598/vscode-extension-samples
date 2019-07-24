@@ -16,7 +16,7 @@ namespace _ {
 		}
 	}
 
-	function massageError(error: Error & { code?: string }): Error {
+	function messageError(error: Error & { code?: string }): Error {
 		if (error.code === 'ENOENT') {
 			return vscode.FileSystemError.FileNotFound();
 		}
